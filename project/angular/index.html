@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="Task2.js"></script>
+	<link rel="stylesheet" href="Task2.css">
+	<title>Task2</title>
+</head>
+<body>
+	<form ng-app="myValidForm" name="myForm" class="myForm" novalidate>
+		<input type="number" name="validNumber" class="input" required age-valid ng-model="number">
+		<span ng-show="myForm.validNumber.$error.required">введите возраст</span>
+		<span ng-show="myForm.validNumber.$error.integer">от 18 до 65!!!</span>	
+
+		<input type="text" name="validName" class="input" required name-valid ng-model="username">
+		<span ng-show="myForm.validName.$error.required">введите ваше имя</span>
+		<span ng-show="myForm.validName.$error.name">ошибка в имени!</span>
+		
+		<input type="text" name="validDate" class="input" required date-valid ng-model="date">
+		<span ng-show="myForm.validDate.$error.required">введите дату</span>
+		<span ng-show="myForm.validDate.$error.dating">ошибка в дате!</span>
+		
+		<input type="submit" class="submit" ng-disabled="myForm.$invalid">
+		<h1 ng-show="myForm.$submitted">Hello,{{username}}</h1>
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.myForm {
+	width: 336px;
+}
+.input {
+	margin: 10px 15px;
+}
+.submit {
+	width: 130px;
+	height: 30px;
+	margin: 15px 35px;
+	background: #98e29a;
+	
+}
